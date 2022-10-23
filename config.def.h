@@ -18,10 +18,84 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+
+
+// static char c000000[]                    = "#000000"; // placeholder value
+
+
+//static const char normfgcolor[]                = "#bbbbbb";
+//static const char normbgcolor[]                = "#222222";
+//static const char normbordercolor[]            = "#444444";
+//static const char normfloatcolor[]             = "#db8fd9";
+
+//static const char selfgcolor[]                 = "#eeeeee";
+//static const char selbgcolor[]                 = "#005577";
+//static const char selbordercolor[]             = "#005577";
+//static const char selfloatcolor[]              = "#005577";
+
+//static char titlenormfgcolor[]           = "#bbbbbb";
+//static char titlenormbgcolor[]           = "#222222";
+//static char titlenormbordercolor[]       = "#444444";
+//static char titlenormfloatcolor[]        = "#db8fd9";
+
+//static char titleselfgcolor[]            = "#eeeeee";
+//static char titleselbgcolor[]            = "#005577";
+//static char titleselbordercolor[]        = "#005577";
+//static char titleselfloatcolor[]         = "#005577";
+
+//static char tagsnormfgcolor[]            = "#bbbbbb";
+//static char tagsnormbgcolor[]            = "#222222";
+//static char tagsnormbordercolor[]        = "#444444";
+//static char tagsnormfloatcolor[]         = "#db8fd9";
+
+//static char tagsselfgcolor[]             = "#eeeeee";
+//static char tagsselbgcolor[]             = "#005577";
+//static char tagsselbordercolor[]         = "#005577";
+//static char tagsselfloatcolor[]          = "#005577";
+
+//static char hidnormfgcolor[]             = "#005577";
+//static char hidselfgcolor[]              = "#227799";
+//static char hidnormbgcolor[]             = "#222222";
+//static char hidselbgcolor[]              = "#222222";
+
+//static char urgfgcolor[]                 = "#bbbbbb";
+//static char urgbgcolor[]                 = "#222222";
+//static char urgbordercolor[]             = "#ff0000";
+//static char urgfloatcolor[]              = "#db8fd9";
+
+
+
+static const char col_1[]  = "#282c34"; /* background color of bar */
+static const char col_2[]  = "#282c34"; /* border color unfocused windows */
+static const char col_3[]  = "#d7d7d7";
+static const char col_4[]  = "#924441"; /* border color focused windows and tags */
+
+
+
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+//	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+//	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+
+	[SchemeNorm] = { col_3, col_1, col_2 },
+	[SchemeSel]  = { col_3, col_4, col_4 },
+
+
+
+//	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor },
+//	[SchemeSel]          = { selfgcolor,       selbgcolor,       selbordercolor },
+//	[SchemeTitleNorm]    = { titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormfloatcolor },
+//	[SchemeTitleSel]     = { titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfloatcolor },
+//	[SchemeTagsNorm]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },
+//	[SchemeTagsSel]      = { tagsselfgcolor,   tagsselbgcolor,   tagsselbordercolor,   tagsselfloatcolor },
+//	[SchemeHidNorm]      = { hidnormfgcolor,   hidnormbgcolor,   c000000,              c000000 },
+//	[SchemeHidSel]       = { hidselfgcolor,    hidselbgcolor,    c000000,              c000000 },
+//	[SchemeUrg]          = { urgfgcolor,       urgbgcolor,       urgbordercolor,       urgfloatcolor },
+
+
+        
+
 };
 
 /* tagging */
