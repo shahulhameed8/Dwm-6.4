@@ -2156,7 +2156,7 @@ main(int argc, char *argv[])
 		else if (!strcmp("-dsb",argv[i])) /* dmenu selected background color */
 			dmenucmd[10] = argv[++i];
 		else if (!strcmp("-dsf",argv[i])) /* dmenu selected foreground color */
-			dmenucmd[12] = argv[++i];
+			dmenucmd[10] = argv[++i];
 		else die(help());
 	if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
 		fputs("warning: no locale support\n", stderr);
