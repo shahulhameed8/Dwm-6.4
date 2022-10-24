@@ -11,15 +11,15 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = {"DejaVuSansCondensed-BoldOblique.ttf:size=13"};
+static const char *fonts[]          = {"DejaVuSansCondensed-BoldOblique.ttf:size=12"};
 static const char dmenufont[]       = "DejaVuSansCondensed-BoldOblique.ttf:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-
-
+static const char col_red[]         = "#FF0000";
+static const char col_yellow[]      = "#ffff00";
 // static char c000000[]                    = "#000000"; // placeholder value
 
 
@@ -78,9 +78,13 @@ static const char *colors[][3]      = {
 //	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 //	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 
-	[SchemeNorm] = { col_3, col_1, col_2 },
-	[SchemeSel]  = { col_3, col_4, col_4 },
+//	[SchemeNorm] = { col_3, col_1, col_2 },
+//	[SchemeSel]  = { col_3, col_4, col_4 },
 
+        [SchemeNorm] = { col_3, col_1, col_cyan },
+        [SchemeSel]  = { col_3, col_4, col_yellow },
+
+//      [SchemeSel]  = { col_cyan, col_gray2, col_gray2 },
 
 
 //	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor },
@@ -100,6 +104,22 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "dev", "www", "sys", "doc", "vbox", "chat", "mus", "vid", "gfx" };
+
+//static const char *tagsel[][2][2] = {
+//	/*      norm                          sel       */
+//	/*  fg          bg              fg          bg  */
+//	{ { col_gray3, col_gray1 }, { "#ffffff", "#ff0000" } },
+//	{ { col_gray3, col_gray1 }, { "#ffffff", "#ff7f00" } },
+//	{ { col_gray3, col_gray1 }, { "#000000", "#ffff00" } },
+//	{ { col_gray3, col_gray1 }, { "#000000", "#00ff00" } },
+//	{ { col_gray3, col_gray1 }, { "#ffffff", "#0000ff" } },
+//	{ { col_gray3, col_gray1 }, { "#ffffff", "#4b0082" } },
+//	{ { col_gray3, col_gray1 }, { "#ffffff", "#9400d3" } },
+//	{ { col_gray3, col_gray1 }, { "#000000", "#ffffff" } },
+//	{ { col_gray3, col_gray1 }, { "#ffffff", "#000000" } },
+//};
+
+
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -137,7 +157,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "terminator", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
