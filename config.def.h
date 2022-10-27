@@ -21,6 +21,10 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char col_red[]         = "#FF0000";
 static const char col_yellow[]      = "#ffff00";
+static const char col_white[]       = "#FFFFFF";
+static const char col_black[]       = "#000000";
+static const char col_pink[]        = "#ff66cc";
+
 // static char c000000[]                    = "#000000"; // placeholder value
 
 
@@ -62,7 +66,7 @@ static const char col_yellow[]      = "#ffff00";
 //static char urgfgcolor[]                 = "#bbbbbb";
 //static char urgbgcolor[]                 = "#222222";
 //static char urgbordercolor[]             = "#ff0000";
-//static char urgfloatcolor[]              = "#db8fd9";
+static char urgfloatcolor[]              = "#db8fd9";
 
 
 
@@ -76,14 +80,14 @@ static const char col_4[]  = "#924441"; /* border color focused windows and tags
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-//	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+//	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
 //	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 
 //	[SchemeNorm] = { col_3, col_1, col_2 },
 //	[SchemeSel]  = { col_3, col_4, col_4 },
 
-        [SchemeNorm] = { col_3, col_1, col_cyan },
-        [SchemeSel]  = { col_3, col_4, col_yellow },
+        [SchemeNorm] = { col_black, urgfloatcolor, col_cyan },
+        [SchemeSel]  = { col_3, col_red, col_yellow },
 
 //      [SchemeSel]  = { col_cyan, col_gray2, col_gray2 },
 
