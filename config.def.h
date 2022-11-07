@@ -6,6 +6,9 @@
 // static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 // static const char *altbarclass = "Polybar";     /* Alternate bar class name */
 // static const char *altbarcmd  = "$HOME/bar.sh"; /* Alternate bar launch command */
+
+static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
+
 static const char *lockcmd[]        = { "slock", NULL }; /* slock lock */ 
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int gappx     = 8;        /* gaps between windows */
@@ -86,6 +89,9 @@ static const char *colors[][3]      = {
 //	[SchemeNorm] = { col_3, col_1, col_2 },
 //	[SchemeSel]  = { col_3, col_4, col_4 },
 
+//      [SchemeNorm] = { col_black, urgfloatcolor, col_cyan },
+//      [SchemeSel]  = { col_3, col_red, col_yellow },
+
         [SchemeNorm] = { col_black, urgfloatcolor, col_cyan },
         [SchemeSel]  = { col_3, col_red, col_yellow },
 
@@ -108,7 +114,9 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "dev", "www", "sys", "doc", "vbox", "chat", "mus", "vid", "gfx" };
+// static const char *tags[] = { "dev", "www", "sys", "doc", "vbox", "chat", "mus", "vid", "gfx" };
+static const char *tags[] = { "Ter", "Ggle", "BVe", "SDesk", "Vbox", "Chat", "Mus", "TW1", "TW2" };
+
 
 //static const char *tagsel[][2][2] = {
 //	/*      norm                          sel       */
@@ -195,7 +203,7 @@ static const Key keys[] = {
         { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 
 
-
+        { MODKEY,                       XK_r, spawn,               {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_l, spawn,               {.v = lockcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
